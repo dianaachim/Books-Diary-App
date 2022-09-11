@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/colorBeige"
+    tools:context=".activities.ViewPhotoActivity">
+
+    <Button
+        android:id="@+id/view_photo_activity_button_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take   picture"
+        android:fontFamily="@font/almendra_display"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/ButtonStyleDark"
+        android:textColor="@color/colorPrimary"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/view_photo_activity_text_with_firebase_ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text result with Firebase ML:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_photo_activity_button_take_picture"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/view_photo_activity_image_text_with_firebase_ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image text here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_photo_activity_text_with_firebase_ml"
+        />
+
+    <TextView
+        android:id="@+id/view_photo_activity_text_with_python_api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text result with Tesseract:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_photo_activity_image_text_with_firebase_ml"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/view_photo_activity_image_text_with_python_api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image text here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_photo_activity_text_with_python_api"
+        />
+
+    <ImageView
+        android:id="@+id/view_photo_activity_imageview_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Books Diary</string>
+
+    <string name="my_books_fragment">My Books Fragment</string>
+    <string name="wishlist_fragment">Wishlist Fragment</string>
+    <string name="favorites_fragment">Favorites Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

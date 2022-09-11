@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/gradient_background"
+    tools:context=".activities.BooksDetailsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_book_details_guideline_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_book_details_guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_book_image"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:src="@drawable/bookworm_transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_book_details_guideline_horizontal"
+        app:layout_constraintEnd_toStartOf="@id/activity_book_details_guideline_vertical"
+        />
+
+    <TextView
+        android:id="@+id/book_details_activity_book_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        android:text="Title: "
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/book_details_activity_book_title_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_title_tv"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+    />
+
+    <TextView
+        android:id="@+id/book_details_activity_book_author_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_title_et"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        android:text="Author: "
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="10dp"
+        />
+
+    <EditText
+        android:id="@+id/book_details_activity_book_author_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_author_tv"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+        />
+
+    <TextView
+        android:id="@+id/book_details_activity_book_description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_book_details_guideline_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Description: "
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/book_details_activity_book_description_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_description_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:maxLines="5"
+
+        />
+
+    <TextView
+        android:id="@+id/book_details_activity_book_notes_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_author_et"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        android:text="Notes: "
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="10dp"
+        />
+
+    <EditText
+        android:id="@+id/book_details_activity_book_notes_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_notes_tv"
+        android:layout_marginStart="10dp"
+        android:maxLines="5"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_open_pdf_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_pdf"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_notes_et"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        app:layout_constraintEnd_toEndOf="@id/book_details_activity_open_pdf_tv"
+        android:visibility="visible"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/book_details_activity_open_pdf_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read PDF file"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_open_pdf_button"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_add_pdf_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_attach_file"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_notes_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/book_details_activity_add_pdf_tv"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/book_details_activity_add_pdf_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add PDF file"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_add_pdf_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_add_to_favorites_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_favorite_border"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_description_et"
+        app:layout_constraintBottom_toTopOf="@id/book_details_activity_save_book_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/book_details_activity_add_to_wishlist_button"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/book_details_favorites_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_add_to_favorites_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/book_details_activity_add_to_wishlist_button"
+        android:text="Favorites"
+        android:textSize="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_added_to_favorites_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_description_et"
+        app:layout_constraintBottom_toTopOf="@id/book_details_activity_save_book_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/book_details_activity_add_to_wishlist_button"
+        android:visibility="gone"
+        android:clickable="false"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_add_to_wishlist_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_description_et"
+        app:layout_constraintBottom_toTopOf="@id/book_details_activity_save_book_button"
+        app:layout_constraintStart_toEndOf="@id/book_details_activity_add_to_favorites_button"
+        app:layout_constraintEnd_toStartOf="@id/activity_book_details_guideline_vertical"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/book_details_wishlist_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_add_to_wishlist_button"
+        app:layout_constraintStart_toEndOf="@id/book_details_activity_add_to_favorites_button"
+        app:layout_constraintEnd_toStartOf="@id/activity_book_details_guideline_vertical"
+        android:text="Wishlist"
+        android:textSize="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_added_to_wishlist_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_full_star"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_description_et"
+        app:layout_constraintBottom_toTopOf="@id/book_details_activity_save_book_button"
+        app:layout_constraintStart_toEndOf="@id/book_details_activity_add_to_favorites_button"
+        app:layout_constraintEnd_toStartOf="@id/activity_book_details_guideline_vertical"
+        android:visibility="gone"
+        android:clickable="false"
+        />
+
+    <ImageView
+        android:id="@+id/book_details_activity_delete_book_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintTop_toBottomOf="@id/book_details_activity_book_description_et"
+        app:layout_constraintBottom_toTopOf="@id/book_details_activity_save_book_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        />
+
+    <Button
+        android:id="@+id/book_details_activity_save_book_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/almendra_display"
+        android:textStyle="bold"
+        style="@style/ButtonStyleDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_book_details_guideline_vertical"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/book_details_activity_cancel_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/almendra_display"
+        android:textStyle="bold"
+        style="@style/ButtonStyleDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_book_details_guideline_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
